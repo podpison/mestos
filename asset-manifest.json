@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/mestos/static/css/main.c85329ac.chunk.css",
+    "main.js": "/mestos/static/js/main.ae900745.chunk.js",
+    "main.js.map": "/mestos/static/js/main.ae900745.chunk.js.map",
+    "runtime-main.js": "/mestos/static/js/runtime-main.ce07365a.js",
+    "runtime-main.js.map": "/mestos/static/js/runtime-main.ce07365a.js.map",
+    "static/js/2.8e6b2594.chunk.js": "/mestos/static/js/2.8e6b2594.chunk.js",
+    "static/js/2.8e6b2594.chunk.js.map": "/mestos/static/js/2.8e6b2594.chunk.js.map",
+    "index.html": "/mestos/index.html",
+    "static/css/main.c85329ac.chunk.css.map": "/mestos/static/css/main.c85329ac.chunk.css.map",
+    "static/js/2.8e6b2594.chunk.js.LICENSE.txt": "/mestos/static/js/2.8e6b2594.chunk.js.LICENSE.txt",
+    "static/media/editButton.af236f6c.svg": "/mestos/static/media/editButton.af236f6c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ce07365a.js",
+    "static/js/2.8e6b2594.chunk.js",
+    "static/css/main.c85329ac.chunk.css",
+    "static/js/main.ae900745.chunk.js"
+  ]
+}
