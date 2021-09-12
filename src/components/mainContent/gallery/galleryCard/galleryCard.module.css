@@ -1,0 +1,39 @@
+.like {
+    color: black;
+    padding: 0 0 0 2%;
+}
+.checked {
+    color: red;
+}
+.checked, .unchecked {
+    margin-top: 11%
+}
+.cardImg {
+    padding-top: 60%;
+}
+.name {
+    font-weight: bold;
+    font-size: 24px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+.trash {
+    margin-top: 1.5%;
+}
+
+@media screen and (max-width: 425px) {
+    .name {
+        overflow-x: scroll
+    }
+    .trash {
+        margin-top: 1.5%
+    }
+}
+
+@media screen and (max-width: 320px, 375px) {
+    .trash {
+        margin-top: 2%
+    }
+}

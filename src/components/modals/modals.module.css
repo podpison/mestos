@@ -1,0 +1,58 @@
+.gridContainer {
+    outline: none
+}
+.modalContainer {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.modal {
+    margin-top: 25vh;
+    background-color: white;
+    padding: 4%;
+    border-radius: 1em;
+}
+.sign {
+    margin-top: 0;
+    white-space: nowrap
+}
+.saveButton {
+    background-color: black;
+    color: white;
+}
+.buttonContainer {
+    margin-top: 5%;
+}
+
+@media screen and (max-width: 425px) {
+    .modalContainer {
+        margin: 0 auto;
+    }
+    .addGalleryCardModal {
+        margin-right: 11.8%
+    }
+    .personalInformationModal {
+        margin-right: 17%
+    }
+    .personalInformationSign {
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .sign {
+        font-size: 20.5px;
+    }
+    .addGalleryCardModal {
+        margin-right: 11.5%
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .sign {
+        font-size: 17.5px;
+    }
+    .addGalleryCardModal {
+        margin-right: 11.2%
+    }
+}
