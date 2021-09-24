@@ -26,33 +26,43 @@
     width: 100%
 }
 .addGalleryCardContainer {
-    width: 100%
+    border: 1px solid white;
+    width: 142px;
+    height: 50px
+}
+.editButton:hover, .addGalleryCardContainer:hover {
+    opacity: 0.6
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 890px) {
     .personalInformationContainer, .mainInformationAndAddButtonContainer {
         display: grid;
         grid-template-columns: 1fr;
     }
-    .name {
-        font-size: 30px;
+    .profession {
+        text-align: center;
     }
     .mainInformation {
         margin: 0 auto;
     }
-    .profession {
-        text-align: center;
-    }
     .editButton {
         padding-right: 50%;
     }
-    .addGalleryCard {
+    .addGalleryCardContainer {
         width: 100%;
-        height: 50px;
-        padding-top: 3%;
+        margin-top: 5%;
     }
     .avatarContainer {
         padding-left: 10%;
+    }
+    .name {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .name {
+        font-size: 25px;
     }
 }
  

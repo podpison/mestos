@@ -43,7 +43,7 @@ let AddGalleryCardModal = ({ addGalleryCard, closeModal }: Props) => {
                     <TextField error={name.length >= 16} inputProps={{maxLength: 16}} fullWidth={true} label='Название' value={name} onChange={(e) => setName(e.target.value)} />
                 </Grid>
                 <Grid className={c.buttonContainer} item>
-                    <Button disabled={name.length === 0 || name.length > 16 || !img.name} fullWidth={true} className={c.saveButton} onClick={saveButton} variant='contained'>Сохранить</Button>
+                    <Button disabled={name.length === 0 || name.length >= 16 || !img.name} fullWidth={true} className={c.saveButton} onClick={saveButton} variant='contained'>Сохранить</Button>
                 </Grid>
             </div>
         </Grid>

@@ -25,6 +25,9 @@ let PersonalInformationWindow = ({ closeModal, updatePersonalInformation, person
         setProfession('');
     }
 
+    let isNameAndLastNameFieldError = nameAndLastName.length >= 28 || nameAndLastName.length === 0;
+    let isProfessionFieldError = profession.length >= 30 || profession.length === 0;
+
     return <div>
         <Modal className={`${c.modalContainer} ${c.personalInformationModal}`} onClose={onCloseModal} open={true} >
             <Grid className={c.gridContainer} container direction='column' justifyContent='center' alignItems='center'>
@@ -33,13 +36,30 @@ let PersonalInformationWindow = ({ closeModal, updatePersonalInformation, person
                         <h2 className={`${c.sign} ${c.personalInformationSign}`}>Редактировать профиль</h2>
                     </Grid>
                     <Grid item>
-                        <TextField fullWidth={true} label='name and last name' value={nameAndLastName} onChange={(e) => setNameAndLastName(e.target.value)} />
+                        <TextField
+                            error={isNameAndLastNameFieldError}
+                            fullWidth={true}
+                            label='name and last name'
+                            value={nameAndLastName}
+                            onChange={(e) => setNameAndLastName(e.target.value)}
+                        />
                     </Grid>
                     <Grid item>
-                        <TextField fullWidth={true} label='profession' value={profession} onChange={(e) => setProfession(e.target.value)} />
+                        <TextField
+                            error={isProfessionFieldError}
+                            fullWidth={true}
+                            label='profession'
+                            value={profession}
+                            onChange={(e) => setProfession(e.target.value)}
+                        />
                     </Grid>
                     <Grid className={c.buttonContainer} item>
-                        <Button fullWidth={true} className={c.saveButton} onClick={() => onSaveButtonClick(nameAndLastName, profession)} variant='contained'>Сохранить</Button>
+                        <Button
+                            disabled={isNameAndLastNameFieldError || isProfessionFieldError}
+                            fullWidth={true}
+                            className={c.saveButton}
+                            onClick={() => onSaveButtonClick(nameAndLastName, profession)}
+                            variant='contained'>Сохранить</Button>
                     </Grid>
                 </div>
             </Grid>

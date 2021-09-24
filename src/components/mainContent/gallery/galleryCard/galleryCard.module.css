@@ -3,7 +3,7 @@
     padding: 0 0 0 2%;
 }
 .checked {
-    color: red;
+    color: black;
 }
 .checked, .unchecked {
     margin-top: 11%
@@ -21,6 +21,9 @@
 }
 .trash {
     margin-top: 1.5%;
+}
+.like:hover, .trash:hover {
+    opacity: 0.5;
 }
 
 @media screen and (max-width: 425px) {

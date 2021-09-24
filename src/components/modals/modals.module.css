@@ -24,6 +24,13 @@
 .buttonContainer {
     margin-top: 5%;
 }
+.emailVerefication {
+    display: flex
+}
+.emailVereficationCheckbox {
+    padding: 1% 0 0 0;
+    color: #443c3c;
+}
 
 @media screen and (max-width: 425px) {
     .modalContainer {

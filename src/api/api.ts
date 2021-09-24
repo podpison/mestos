@@ -24,14 +24,25 @@ let storage = firebase.storage();
 
 export let loginAPI = {
     signUp: async (email: string, password: string) => {
-        let userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
-        if (userCredential.user !== null) return userCredential.user.uid;
+        let response = await firebase.auth().createUserWithEmailAndPassword(email, password)
+        .catch(error => error);
+        if (response.user) return response.user.uid;
+        return response;
     },
     signIn: async (email: string, password: string) => {
-        return await firebase.auth().signInWithEmailAndPassword(email, password);
+        let response = await firebase.auth().signInWithEmailAndPassword(email, password)
+        .catch(error => error);
+        if (response.user) return response.user.uid;
+        return response;
     },
     logOut: async () => {
         return await firebase.auth().signOut();
+    },
+    emailVerefication: async (): Promise<any> => {
+        let userCredential = firebase.auth().currentUser;
+        if (userCredential) {
+            return await userCredential.sendEmailVerification();
+        }
     }
 };
 
