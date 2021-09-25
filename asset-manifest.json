@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/mestos/static/css/main.a800b83e.chunk.css",
-    "main.js": "/mestos/static/js/main.af0f39d7.chunk.js",
-    "main.js.map": "/mestos/static/js/main.af0f39d7.chunk.js.map",
+    "main.css": "/mestos/static/css/main.d3d322b8.chunk.css",
+    "main.js": "/mestos/static/js/main.49225316.chunk.js",
+    "main.js.map": "/mestos/static/js/main.49225316.chunk.js.map",
     "runtime-main.js": "/mestos/static/js/runtime-main.ce07365a.js",
     "runtime-main.js.map": "/mestos/static/js/runtime-main.ce07365a.js.map",
     "static/js/2.06ca162b.chunk.js": "/mestos/static/js/2.06ca162b.chunk.js",
     "static/js/2.06ca162b.chunk.js.map": "/mestos/static/js/2.06ca162b.chunk.js.map",
     "index.html": "/mestos/index.html",
-    "static/css/main.a800b83e.chunk.css.map": "/mestos/static/css/main.a800b83e.chunk.css.map",
+    "static/css/main.d3d322b8.chunk.css.map": "/mestos/static/css/main.d3d322b8.chunk.css.map",
     "static/js/2.06ca162b.chunk.js.LICENSE.txt": "/mestos/static/js/2.06ca162b.chunk.js.LICENSE.txt",
     "static/media/editButton.af236f6c.svg": "/mestos/static/media/editButton.af236f6c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.ce07365a.js",
     "static/js/2.06ca162b.chunk.js",
-    "static/css/main.a800b83e.chunk.css",
-    "static/js/main.af0f39d7.chunk.js"
+    "static/css/main.d3d322b8.chunk.css",
+    "static/js/main.49225316.chunk.js"
   ]
 }
