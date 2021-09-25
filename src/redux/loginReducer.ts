@@ -83,7 +83,7 @@ export let signIn = (email: string, password: string): Thunk => async (dispatch)
         };
     } else if (typeof response !== 'undefined') {
         dispatch(loginActions.setError(response));
-    }
+    };
 };
 
 export let logOut = (): Thunk => async (dispatch) => {

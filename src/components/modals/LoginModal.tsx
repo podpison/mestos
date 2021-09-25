@@ -1,5 +1,6 @@
 import { Button, Grid, Modal, TextField } from '@material-ui/core';
 import { useState } from 'react';
+import { useClose } from '../../assets/hoc/useClose';
 import { LoginErrors } from '../../redux/loginReducer';
 import c from './modals.module.css';
 
@@ -17,7 +18,6 @@ let LoginModal = ({signIn, closeModal, errors, clearErrors}: Props) => {
 
     let saveData = () => {
         signIn(email, password);
-        errors.email.length === 0 && errors.password.length === 0 && onCloseModal();
     };
 
     let onCloseModal = () => {
@@ -26,6 +26,9 @@ let LoginModal = ({signIn, closeModal, errors, clearErrors}: Props) => {
         setEmail('');
         setPassword('');
     };
+
+    let isClose = errors.email.length === 0 && errors.password.length === 0;
+    useClose(isClose, onCloseModal, errors);
 
     return <Modal className={c.modalContainer} onClose={onCloseModal} open={true} >
         <Grid className={c.gridContainer} container direction='column' justifyContent='center' alignItems='center'>

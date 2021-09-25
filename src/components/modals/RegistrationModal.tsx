@@ -1,5 +1,6 @@
 import { Button, Grid, Modal, TextField, Checkbox } from '@material-ui/core';
 import { useState } from 'react';
+import { useClose } from '../../assets/hoc/useClose';
 import { LoginErrors } from '../../redux/loginReducer';
 import c from './modals.module.css';
 
@@ -25,7 +26,6 @@ let RegistrationModal = ({signUp, closeModal, errors, clearErrors}: Props) => {
         nameAndLastName.length === 0 ? setIsNameAndLastNameError(true) : setIsNameAndLastNameError(false);
         profession.length === 0 ? setIsProfessionError(true) : setIsProfessionError(false);
         (nameAndLastName.length && profession.length !== 0) && signUp(nameAndLastName, profession, email, password, isGetEmailVerefication);
-        errors.email.length === 0 && errors.password.length === 0 && onCloseModal();
     };
 
     let onCloseModal = () => {
@@ -36,6 +36,9 @@ let RegistrationModal = ({signUp, closeModal, errors, clearErrors}: Props) => {
         setEmail('');
         setPassword('');
     };
+
+    let isClose = errors.email.length === 0 && errors.password.length === 0;
+    useClose(isClose, onCloseModal, errors);
 
     return <Modal className={c.modalContainer} onClose={onCloseModal} open={true} >
         <Grid className={c.gridContainer} container direction='column' justifyContent='center' alignItems='center'>
@@ -86,7 +89,7 @@ let RegistrationModal = ({signUp, closeModal, errors, clearErrors}: Props) => {
                 <Grid item>
                     <div className={c.emailVerefication}>  
                         <Checkbox className={c.emailVereficationCheckbox} onClick={() => setIsGetEmailVerefication(!isGetEmailVerefication)} checked={isGetEmailVerefication} />
-                        <p>Подтвердить почту</p>
+                        <p className={c.confirmEmailSign}>Подтвердить почту</p>
                     </div>
                 </Grid>
                 <Grid className={c.buttonContainer} item>

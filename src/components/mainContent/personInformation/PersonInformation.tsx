@@ -46,8 +46,8 @@ let PersonalInformation = ({avatar, updateAvatar, addGalleryCard, updatePersonal
             <p className={c.profession}>{personalInformation.profession}</p>
         </div>
         <div className={c.addButtonContainer}>
-            <Button className={c.addGalleryCardContainer} disabled={!isAuthorized}>
-                <img className={c.addGalleryCard} onClick={() => setIsAddGalleryCardModalOpen(true)} src={addButton} alt='add button' />
+            <Button onClick={() => setIsAddGalleryCardModalOpen(true)} className={c.addGalleryCardContainer} disabled={!isAuthorized}>
+                <img className={c.addGalleryCard} src={addButton} alt='add button' />
             </Button>
         </div>
         </div>
