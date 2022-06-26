@@ -18,7 +18,7 @@ let GalleryCard = ({src, name, isLiked, updateIsLiked, deleteGalleryCard}: Props
         updateIsLiked(!isLiked, name);
     }
 
-    return <Grid item xs={12} sm={6} md={4} lg={3} xl={2} >
+    return <Grid item xs={12} sm={6} md={4} >
         <Card>
             <CardMedia className={c.cardImg} image={src} />
             <CardContent className={c.content}>

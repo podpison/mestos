@@ -25,7 +25,7 @@ let PersonalInformationWindow = ({ closeModal, updatePersonalInformation, person
         setProfession('');
     }
 
-    let isNameAndLastNameFieldError = nameAndLastName.length >= 28 || nameAndLastName.length === 0;
+    let isNameAndLastNameFieldError = nameAndLastName.length >= 18 || nameAndLastName.length === 0;
     let isProfessionFieldError = profession.length >= 30 || profession.length === 0;
 
     return <div>

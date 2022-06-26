@@ -18,6 +18,7 @@
 .content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .trash {
     margin-top: 1.5%;
@@ -35,7 +36,7 @@
     }
 }
 
-@media screen and (max-width: 320px, 375px) {
+@media screen and (max-width: 375px) {
     .trash {
         margin-top: 2%
     }
